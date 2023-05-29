@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const MessageForm = ({ postMessage }) => {
+function MessageForm({ postMessage }) {
   const [message, setMessage] = useState('')
 
   const handleSubmit = () => {

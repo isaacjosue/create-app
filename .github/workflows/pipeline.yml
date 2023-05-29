@@ -1,0 +1,27 @@
+name: "Deployment pipeline"
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize]
+
+jobs:
+  pipeline:
+    name: Deployment pipeline
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "lts/Gallium"
+      - name: Install dependencies
+        run: npm i
+      - name: Build app
+        run: npm run build
+      - name: Test lint
+        run: npm run lint
+      - name: Run tests (e2e)
+        run: npm run test:e2e

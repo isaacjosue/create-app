@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MessageList = ({ messages, deleteMessage }) => {
+function MessageList({ messages, deleteMessage }) {
   if (!messages) return null
 
   const handleDelete = (message) => () => {
@@ -20,6 +20,5 @@ const MessageList = ({ messages, deleteMessage }) => {
     </ul>
   )
 }
-
 
 export default MessageList

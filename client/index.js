@@ -1,3 +1,4 @@
+/* eslint-disable import/no-import-module-exports */
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
@@ -5,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import 'Assets/custom.scss'
 import App from 'Components/App'
 import ErrorBoundary from 'Components/ErrorBoundary'
+/* eslint-enable import/no-import-module-exports */
 
 const refresh = () => render(
   <BrowserRouter>
