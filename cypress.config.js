@@ -3,7 +3,7 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   video: false,
   e2e: {
-    baseUrl: "http://localhost:8000"
+    baseUrl: 'http://localhost:8000',
     // setupNodeEvents(on, config) {
     //   // implement node event listeners here
     // },
