@@ -4,7 +4,7 @@ import { getMessages, postMessage, deleteMessage } from 'Utilities/services/mess
 import MessageForm from 'Components/MessageView/MessageForm'
 import MessageList from 'Components/MessageView/MessageList'
 
-const MessageView = () => {
+function MessageView() {
   const [messages, setMessages] = useState([])
 
   const handleGetMessages = async () => {

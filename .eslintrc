@@ -1,14 +1,15 @@
 {
   "extends": "airbnb",
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "parserOptions": { "requireConfigFile": false },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest/globals": true,
+    "cypress/globals": true
   },
+  "plugins": ["react", "jest", "cypress"],
   "rules": {
-    "semi": [
-      "error",
-      "never"
-    ],
+    "semi": ["error", "never"],
     "max-len": [1, 200],
     "no-shadow": 0,
     "no-plusplus": 0,
